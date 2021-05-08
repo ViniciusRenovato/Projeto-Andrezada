@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entidaades;
+package dao;
 
 /**
  *
  * @author Matheus
  */
-public class Funcionarios {
+public class Dao {
     
 }
