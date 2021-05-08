@@ -1,25 +1,50 @@
 
 package entidaades;
 
+import java.io.Serializable;
 import java.sql.Date;
+import java.sql.Time;
+import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
+@Entity
 
-public class CadastroCliente {
+public class CadastroCliente implements Serializable{
+
+    @OneToMany(mappedBy = "cadastroCliente")
+    private List<Agendamento> agendamentos;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY )
+    
+    private Integer Id;
     private String nome;
     private String telefone;
-    private Date aniversario;
-    private int idcliente;
+    @Temporal(TemporalType.DATE)
+    private Date Data_Nasc;
+    private Integer Idcliente;
 
-    public int getIdcliente() {
-        return idcliente;
+    public List<Agendamento> getAgendamentos() {
+        return agendamentos;
     }
 
-    public void setIdcliente(int idcliente) {
-        this.idcliente = idcliente;
+    public void setAgendamentos(List<Agendamento> agendamentos) {
+        this.agendamentos = agendamentos;
     }
-    
-   
-    
+
+    public Integer getId() {
+        return Id;
+    }
+
+    public void setId(Integer Id) {
+        this.Id = Id;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -36,11 +61,21 @@ public class CadastroCliente {
         this.telefone = telefone;
     }
 
-    public Date getAniversario() {
-        return aniversario;
+    public Date getData_Nasc() {
+        return Data_Nasc;
     }
 
-    public void setAniversario(Date aniversario) {
-        this.aniversario = aniversario;
-    }   
+    public void setData_Nasc(Date Data_Nasc) {
+        this.Data_Nasc = Data_Nasc;
+    }
+
+    public Integer getIdcliente() {
+        return Idcliente;
+    }
+
+    public void setIdcliente(Integer Idcliente) {
+        this.Idcliente = Idcliente;
+    }
+ 
+    
 }
