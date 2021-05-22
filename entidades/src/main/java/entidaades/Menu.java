@@ -27,15 +27,12 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         CadastroCliente = new javax.swing.JButton();
         CadastroAgendamento = new javax.swing.JButton();
         CadastroServicos = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jLabel1.setText("Menuzada Baludo");
 
         CadastroCliente.setText("Cadastro Cliente");
         CadastroCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -52,8 +49,13 @@ public class Menu extends javax.swing.JFrame {
         });
 
         CadastroServicos.setText("Cadastro de Serviços");
+        CadastroServicos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CadastroServicosActionPerformed(evt);
+            }
+        });
 
-        jButton1.setText("Voltar");
+        jButton1.setText("DESLOGAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -64,33 +66,27 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(138, 138, 138))
             .addGroup(layout.createSequentialGroup()
-                .addGap(146, 146, 146)
+                .addComponent(jButton1)
+                .addGap(0, 321, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(115, 115, 115)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(CadastroAgendamento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(CadastroCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(CadastroServicos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(93, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jButton1)
-                .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(CadastroServicos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addContainerGap(68, Short.MAX_VALUE)
                 .addComponent(CadastroCliente)
-                .addGap(45, 45, 45)
-                .addComponent(CadastroAgendamento)
-                .addGap(42, 42, 42)
+                .addGap(38, 38, 38)
                 .addComponent(CadastroServicos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addGap(38, 38, 38)
+                .addComponent(CadastroAgendamento)
+                .addGap(48, 48, 48)
                 .addComponent(jButton1)
                 .addContainerGap())
         );
@@ -103,12 +99,16 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_CadastroClienteActionPerformed
 
     private void CadastroAgendamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastroAgendamentoActionPerformed
-        // TODO add your handling code here:
+        new cadastrodoagendamento().setVisible(true);
     }//GEN-LAST:event_CadastroAgendamentoActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void CadastroServicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastroServicosActionPerformed
+        new cadastrodoservico().setVisible(true);
+    }//GEN-LAST:event_CadastroServicosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,6 +150,5 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton CadastroCliente;
     private javax.swing.JButton CadastroServicos;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
